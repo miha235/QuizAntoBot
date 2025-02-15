@@ -15,7 +15,15 @@ dp = Dispatcher()
 
 @dp.message(Command("start"))
 async def start_command(message: types.Message):
-    await message.answer("Are you ready to play ? (Reply with 'Yes' or 'No')")
+    await message.answer("🏰The Grand Quest of Anto the Ant🇮🇹\n\n💌\"Per l'amore, niente è impossibile!\"\n\nDeep "
+                         "in the Enchanted Garden of Lizard Wizard, where the cobblestone streets shimmer with ancient "
+                         "magic and the wind carries whispers in Italian, Anto the Ant receives a mysterious message. "
+                         "A tiny letter, sealed with a delicate imprint of a caterpillar, flutters into his hands.\n\n"
+                         "\"Anto, my love, I am waiting for you at the top of the Great Fig Tree. But beware! The journey "
+                         "is perilous, filled with trials that will test your wit, your memory, and your devotion. You "
+                         "must travel through ten enchanted realms, each one holding a challenge. Only if you solve all "
+                         "the riddles and overcome every obstacle will you reach me. I believe in you, mio caro. \n\nAre you "
+                         "ready for this adventure, my love? Yes or no?\"")
 
 @dp.message()
 async def handle_response(message: types.Message):
@@ -24,7 +32,12 @@ async def handle_response(message: types.Message):
     if message.text.lower() == "yes":
         await start_game(message)
     elif message.text.lower() == "no":
-        await message.answer("Alright, let me know when you are ready! 😊")
+        await message.answer("💌 \"Oh, mio piccolo Anto… Do you truly wish to turn back? To let fate slip through your "
+                             "tiny but mighty legs? I shall wait for you still, perched upon the Great Fig Tree, my "
+                             "heart fluttering like the wind in the leaves. But every second without you is an eternity! "
+                             "Perhaps, mio caro, you will find your courage and return when you are ready. I will be "
+                             "waiting...\"\n\n🥀 The letter glows softly before fading into golden dust, as if giving "
+                             "you one last chance to reconsider…")
     else:
         await check_answer(message)
 

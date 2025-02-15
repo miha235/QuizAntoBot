@@ -50,7 +50,7 @@ async def check_answer(message: types.Message):
         correct_answer = QUESTIONS[index]["answer"]
 
         if message.text.strip ().lower () == correct_answer.lower ():
-            await message.answer ( "✅ Correct!" )
+            await message.answer ( "\n\n😊 Добро Пожалуйста! You are right!" )
             current_question[user_id] += 1
             wrong_attempts[user_id] = 0  # Сбрасываем ошибки
             awaiting_decision[user_id] = False  # Сбрасываем флаг
@@ -68,7 +68,7 @@ async def check_answer(message: types.Message):
                     "❗ Ты ошибся 10 раз. Хочешь попробовать еще или показать правильный ответ? (Напиши 'еще' или 'ответ')" )
 
             else:
-                await message.answer ( f"❌ Wrong answer. Try again! (Attempts: {wrong_attempts[user_id]}/10)" )
+                await message.answer ( f"❌ Елки-Палки! Try again! (Attempts: {wrong_attempts[user_id]}/10)" )
 
 
 async def handle_retry_or_answer(message: types.Message):
@@ -81,7 +81,7 @@ async def handle_retry_or_answer(message: types.Message):
 
         if message.text.strip ().lower () == "еще":
             awaiting_decision[user_id] = False  # Снимаем флаг ожидания
-            await message.answer ( "💪 Попробуй снова!" )
+            await message.answer ( "💪 Try again!" )
 
         elif message.text.strip ().lower () == "ответ":
             await message.answer ( f"✅ Правильный ответ: {correct_answer}" )

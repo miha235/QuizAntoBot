@@ -1,0 +1,14 @@
+{
+  "build": {
+    "nixpacks": {
+      "phases": {
+        "setup": {
+          "cmds": ["pip install -r requirements.txt"]
+        },
+        "start": {
+          "cmds": ["python bot.py"]
+        }
+      }
+    }
+  }
+}

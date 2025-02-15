@@ -7,10 +7,10 @@ from handlers import start_game, check_answer
 
 logging.basicConfig(level=logging.INFO)
 
-if not TOKEN:
-    raise ValueError("❌ TOKEN не найден! Проверь переменные среды.")
 
+print(f"TOKEN: {TOKEN}")  # Выведет токен (если пусто - проблема в загрузке .env)
 bot = Bot(token=TOKEN)
+
 dp = Dispatcher()
 
 @dp.message(Command("start"))

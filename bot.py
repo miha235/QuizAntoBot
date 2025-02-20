@@ -21,9 +21,9 @@ async def start_command(message: types.Message):
                          "A tiny letter, sealed with a delicate imprint of a caterpillar, flutters into his hands.\n\n"
                          "\"Anto, my love, I am waiting for you at the top of the Great Fig Tree. But beware! The journey "
                          "is perilous, filled with trials that will test your wit, your memory, and your devotion. You "
-                         "must travel through ten enchanted realms, each one holding a challenge. Only if you solve all "
+                         "must travel through the enchanted realms, each one holding a challenge. Only if you solve all "
                          "the riddles and overcome every obstacle will you reach me. I believe in you, mio caro. \n\nAre you "
-                         "ready for this adventure, my love? Yes or no?\"")
+                         "ready for this adventure, my love? Yes or  No?\"")
 
 @dp.message()
 async def handle_response(message: types.Message):

@@ -29,6 +29,13 @@ async def start_command(message: types.Message):
                          "the riddles and overcome every obstacle will you reach me. I believe in you, mio caro. \n\nAre you "
                          "ready for this adventure, my love? Yes or  No?\"")
 
+# обработчик ошибок здесь
+@dp.errors_handler()
+async def error_handler(update, exception):
+    logging.error(f"Update: {update} caused error: {exception}")
+    return True  # Предотвращает повторное распространение ошибки
+
+
 @dp.message()
 async def handle_response(message: types.Message):
     user_id = message.from_user.id

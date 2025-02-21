@@ -5,7 +5,11 @@ from aiogram.filters import Command
 from config import TOKEN
 from handlers import start_game, check_answer
 
-logging.basicConfig(level=logging.INFO)
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+
+
 
 
 print(f"TOKEN: {TOKEN}")  # Выведет токен (если пусто - проблема в загрузке .env)

@@ -30,10 +30,10 @@ async def start_command(message: types.Message):
                          "ready for this adventure, my love? Yes or  No?\"")
 
 # обработчик ошибок здесь
-@dp.errors_handler()
+''''@dp.errors_handler()
 async def error_handler(update, exception):
     logging.error(f"Update: {update} caused error: {exception}")
-    return True  # Предотвращает повторное распространение ошибки
+    return True  # Предотвращает повторное распространение ошибки'''
 
 
 @dp.message()
